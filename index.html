@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <script src="./app.js" defer></script>
+    <title>Calculadora de combustível</title>
+</head>
+<body>
+    <main>
+    <button id="btn-theme"><i class="fi fi-rr-bulb"></i></button>
+    <section class="container">
+        <h1>calculadora de combustível</h1>
+
+        <div id="boxForm" class="boxform">
+            <label for="fuelprice">Valor do combustível</label>
+            <input type="text" name="fuelprice" id="fuelprice" placeholder="Digite o preço do combustível..." required>
+            <label for="useForKm">Consumo por Km</label>
+            <input type="text" name="useForKm" id="useForKm" placeholder="Digite quantos Km seu veículoo percorre por litro..." required>
+            <label for="distance">Distância</label>
+            <input type="text" name="distance" id="distance" placeholder="Digite a distância que você percorrerá em sua viagem..." required>
+        </div>
+
+        <!--Botao para calcular-->
+        <button type="button" id="btnCalcule">calcular</button>
+
+        <!-- aqui será inserido o texto informando o calculo do valor total e de quanto percorrerá em Km com a quantidade inserida -->
+        <div id="texto">
+            
+        </div>
+    </section>
+    </main>
+</body>
+</html>

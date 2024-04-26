@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #f2f2f2;
+    --secundary-color: #3e3e3e;
+    --primary-colordark: #3e3e3e;
+    --secundary-colordark: #f2f2f2;
+    --bgcolor-light: #ffffff;
+    --bgcolor-dark: #222222;
+    --btncalc-color: #497b37;
+    --btncalc-fontcolor: #497b37;
+    --btncalc-fontcolorlight: #fff;
+}
+
+body{
+    background-color: var(--bgcolor-light);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark{
+    background-color: var(--bgcolor-dark);
+}
+
+#btn-theme{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: .5rem;
+    transition: all .3s ease;
+
+    & .fi{
+        font-size: 16px;
+        color: var(--secundary-color);
+    }
+}
+
+#btn-theme:hover{
+    background-color: #ffd900;
+}
+
+.container{
+    color: var(--secundary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    max-width: 415px;
+    height: 450px;
+    background-color: var(--primary-color);
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+
+    & h1{
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    & .boxform{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & label{
+            margin-top: 1rem;
+        }
+
+        & input{
+            padding: .5rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: .5rem;
+        }
+    }
+    
+
+    & #btnCalcule{
+        margin-top: 1rem;
+        width: 50%;
+        height: 2.5rem;
+        border-radius: 2rem;
+        border: 3px solid #5c863f;
+        background-color: transparent;
+        color: #5c863f;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all .2s ease;
+    }
+
+    & #btnCalcule:hover{
+        background-color: #5c863f;
+        color: #fff;
+    }
+    
+    & #texto{
+        margin-top: 1rem;
+    }
+}
+
+body.dark main > .container{
+    background-color: var(--primary-colordark);
+    color: var(--secundary-colordark);
+}
+
+body.dark input{
+    background-color: #5e5e5e;
+    
+}
+
+body.dark input::placeholder{
+    color: #fff;
+}
